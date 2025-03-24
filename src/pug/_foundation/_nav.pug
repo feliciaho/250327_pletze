@@ -1,0 +1,40 @@
+- 
+	var obj = [
+		{ link: 'https://lostark.mangot5.com/lostark/index', img: 'images/nav_btn_home.png'},
+		{ link: 'https://www.facebook.com/LOSTARKTW', img: 'https://landing.mangot5.com/template/lostark/event/nav/images/nav_btn_facebook.png' },
+		{ link: 'https://www.youtube.com/channel/UCrKDxgCv2U2oOEQLr-LI9Tw', img: 'https://landing.mangot5.com/template/lostark/event/nav/images/nav_btn_youtube.png' },
+		{ link: 'https://forum.gamer.com.tw/B.php?bsn=27410', img: 'https://landing.mangot5.com/template/lostark/event/nav/images/nav_btn_baha.png'}
+	]
+nav.nav-top
+	ul(class="nav_logo")
+		li: a(href="https://lostark.mangot5.com/lostark/index" target="_blank") 
+			img(src="https://landing.mangot5.com/template/lostark/event/nav/images/nav-logo.png", alt="lostark 失落的方舟")
+	ul(class="nav_social")
+		each item in obj
+			li(class="nav-item")
+				a(class="nav-item"
+					href=`${item.link}` 
+					target="_blank"
+					): img(src=`${item.img}` , alt="")
+		li#history_list(class="history_list border_b")
+			a(href="javascript:void(0)") 
+				svg(xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-grid-3x3-gap-fill" viewBox="0 0 16 16")
+					path(d="M1 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V2zM1 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V7zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V7zM1 12a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2z")
+
+nav(class="nav-left")
+	ul(class="nav_logo")
+		li: a(href="#" target="_blank") 
+			img(src="https://landing.mangot5.com/template/lostark/event/nav/images/nav-logo.png", alt="lostark 失落的方舟")
+
+	//- 左側在線活動
+	div#nav_version_left(class="nav_version_left")
+	div(class="nav_hp")
+		li(class="nav_home border_b"): a(href="https://lostark.mangot5.com/lostark/index" target="_blank") 回首頁
+	div#ver_toggler(class="")
+		span.span1
+		span.span2
+		span.span3
+
+//- 右側版本紀錄
+nav(class="nav-right animate__animated animate__fadeIn")
+	ul#nav_version(class="left-content")

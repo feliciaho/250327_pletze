@@ -1,0 +1,92 @@
+section
+    // common-sass-start
+    padding: 2% 2% 5% 2%
+    min-height: 100vh
+    position: relative
+    overflow: hidden
+    display: flex
+    flex-direction: column
+    justify-content: center
+    +media-pcWide
+        min-height: 70vh
+    p
+        font-size: 1.1rem
+        color: #cebe94
+        +media-narrow
+            margin: 2% 40px
+            text-align: start
+            font-size: 1rem
+        span
+            color: #c6ab5a
+            font-size: 1.1rem
+            vertical-align: baseline
+            +media-sp
+                font-size: 1rem
+    h1
+        font-size: clamp(2rem, 3vw, 3.5rem)
+        +media-narrow
+            margin: 0 40px
+    h2
+        font-size: clamp(1.3rem, 2vw, 2.5rem)
+        +media-narrow
+            margin: 0 40px
+    .title
+        margin: 3% 0
+        +media-narrow
+            img
+                max-width: 80%
+    // common-sass-end
+    &#s1
+        transition: .5s all
+        .bg
+            position: absolute
+            width: 100%
+            height: 100%
+            top: 0%
+            left: 0%
+            z-index: 0
+            &.bg-1
+                background: url(../images/s1Bg01.jpg) no-repeat 30% 50%
+                background-size: cover
+                animation: move 40s infinite linear
+            &.bg-2
+                background: url(../images/s1Bg02.jpg) no-repeat 30% 50%
+                background-size: cover
+                animation: move 40s infinite linear
+            &.bg-3
+                background: url(../images/s1Bg03.jpg) no-repeat 30% 50%
+                background-size: cover
+                animation: move 40s infinite linear
+        @keyframes move
+            0% ,100%
+                transform: scale(1)
+            50%
+                transform: scale(1.2)
+        .content
+            text-align: start
+            margin: 5% 0 0 15%
+            +media-sp
+                margin: 0 5%
+            +media-narrow
+                margin: unset
+            .contentTitle
+                color: #efe9be
+                font-family: "Noto Serif TC", serif
+                font-weight: 500
+                line-height: 1.2
+            p
+                text-align: start
+            .tab
+                display: flex
+                flex-direction: row
+                gap: 15px
+                transition: .3s all
+                +media-narrow
+                    padding: 0 40px
+                    gap: 5px
+                button
+                    border: 1px solid rgba(206, 190, 148, 0)
+                    filter: brightness(0.8)
+                    &.active
+                        filter: brightness(1.2)
+                        border: 1px solid #cebe94

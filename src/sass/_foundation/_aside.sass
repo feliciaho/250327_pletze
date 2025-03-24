@@ -1,0 +1,44 @@
+aside
+	position: fixed
+	z-index: 50
+	top: 50%
+	right: 15px
+	transform: translateY(-50%)
+	+media-pcWide
+		display: none !important
+	ul
+		display: flex
+		flex-direction: column
+		align-items: flex-end
+		li
+			display: block
+			position: relative
+			margin: 20px 0 0 0
+			padding: 5px 40px 5px 10px
+			color: #ddd2b3
+			cursor: pointer
+			background-color: #8c6c14
+			border-radius: 5px
+			font-size: 1rem
+			&:after
+				content: ''
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				width: 24px
+				height: 24px
+				background: url(../images/asideImg.png) no-repeat 50% 50%
+				margin: 0 0 0 10px
+			&.active, &:hover
+				color: #ffffff
+				background-color: #c7a444
+				transition: .3s all
+				&:after
+					background-position: 100% 0
+			&#top
+				padding: unset
+				background-color: unset
+				&:after
+					background-image: unset
+				&.active, &:hover
+					filter: brightness(2)

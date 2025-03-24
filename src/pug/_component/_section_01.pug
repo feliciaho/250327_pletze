@@ -1,0 +1,23 @@
+section#s1
+	.bg(:class="`bg-${ nowBg }`")
+	.title(data-aos="fade-down" data-aos-duration="1000")
+		img(src="images/s1Title.png" alt="普列采大陸介紹")
+	.content(data-aos="fade-right" data-aos-duration="1000")
+		.contentTitle
+			h2 偉大藝術品隨處可見的​
+			h1 藝術與浪漫之都​
+		.text
+			p
+				| 普列采位於吉埃娜之海中央，​​​#[br]
+				| 從很久以前開始，​
+				| 就是無數文化往來的要道。
+			p
+				| 但是，在這座和平又美麗的都市外圍，​#[br]
+				| 有個小鎮的傷口尚未癒合，至今仍是一片廢墟。​​
+			p
+				| 這片土地過去究竟發生過什麼事？​​#[br]
+				| 我們必須追查阿曼留在昔日痕跡裡的記憶。​
+		.tab
+			button(v-for="i in 3",:class="{'active': i == nowBg}"
+			@click="nowBg = i" :key="'nowBg'+ i")
+				img(:src="`images/s1Tab0${i}.png`" :alt="`普列采大陸介紹`")

@@ -1,0 +1,84 @@
+- var gtm_id = "GTM-PB58S8"
+- var meta_title = "《失落的方舟：LOST ARK》普列采"
+- var meta_descript = "《失落的方舟：LOST ARK》普列采"
+
+doctype html
+html(lang="zh-TW")
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		meta(name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1")
+		meta(name="keywords" content=`${meta_title}`)
+		meta(name="description" content=`${meta_descript}`)
+		title #{meta_title}
+		//- FB專用標籤設定
+		meta(property="og:url" content="https://landing.mangot5.com/template/lostark/event/250327_pletze/index.html")
+		meta(property="og:type" content="website")
+		meta(property="og:title" content=`${meta_title}`)
+		meta(property="og:description" content=`${meta_descript}`)
+		meta(property="og:image" content="https://landing.mangot5.com/template/lostark/event/250327_pletze/images/fb.jpg")
+		//- End FB專用標籤設定
+		link(rel="shortcut icon" href="//landing.mangot5.com/template/happytuk/favicon/lostark.ico")
+		link(rel="stylesheet" href="//landing.mangot5.com/template/lostark/event/nav/css/bootstrap4.6.2.min.css")
+		link(rel="stylesheet" href="//landing.mangot5.com/template/lostark/event/nav/css/animate_v4.1.1.css")
+		link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css")
+		link(rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css")
+		//- for load file
+		link(rel="stylesheet" href="//landing.mangot5.com/template/lostark/event/nav/css/app.css")
+		link(rel="stylesheet" href="css/app.css")
+		//- Google Tag Manager
+		script.
+			(function (w, d, s, l, i) {
+				w[l] = w[l] || [];
+				w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+				var f = d.getElementsByTagName(s)[0],
+					j = d.createElement(s),
+					dl = l != 'dataLayer' ? '&l=' + l : '';
+				j.async = true;
+				j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+				f.parentNode.insertBefore(j, f);
+			})(window, document, 'script', 'dataLayer', '#{gtm_id}');
+		//- End Google Tag Manager
+	body
+		//- Google Tag Manager
+		noscript: iframe(src=`//www.googletagmanager.com/ns.html?id=${gtm_id}` height="0" width="0" style="display: none; visibility: hidden")
+		//- End Google Tag Manager
+
+		//- nav
+		include pug/_foundation/_nav
+
+		#wrap(class="wrap" @vue:mounted="mounted")
+			//- main
+			include pug/_component/_main
+			//- section 1
+			include pug/_component/_section_01
+			//- section 2
+			include pug/_component/_section_02
+			//- section 3
+			include pug/_component/_section_03
+			//- section 4
+			include pug/_component/_section_04
+			//- aside
+			include pug/_foundation/_aside
+		//- footer
+		include pug/_foundation/_footer
+			
+
+		script(src="https://www.youtube.com/iframe_api")
+		script(src="//landing.mangot5.com/template/lostark/event/nav/js/jquery-3.4.1.min.js")
+		script(src="//landing.mangot5.com/template/lostark/event/nav/js/popper.min.js")
+		script(src="//landing.mangot5.com/template/lostark/event/nav/js/bootstrap4.min.js")
+		script(src="//landing.mangot5.com/template/lostark/event/nav/js/swiper-bundle.min.js")
+		script(src="https://unpkg.com/aos@2.3.1/dist/aos.js")
+		script(src="js/app.js" type="module")
+
+		script.
+			(function (d, s, id) {
+				let js,
+					fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) return;
+				js = d.createElement(s);
+				js.id = id;
+				js.src = 'https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.10';
+				fjs.parentNode.insertBefore(js, fjs);
+			})(document, 'script', 'facebook-jssdk');

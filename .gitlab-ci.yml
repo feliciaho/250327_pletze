@@ -1,0 +1,5 @@
+include:
+  - project: 'Design/Document/deploy_sftp_v2'
+    file: '.gitlab-ci.yml'
+  - project: 'Design/Document/deploy_sftp_qa_v2'
+    file: '.gitlab-ci.yml'

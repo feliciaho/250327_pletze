@@ -1,0 +1,42 @@
+.swiper
+    max-width: 70%
+    +media-pcWide
+        max-width: 100%
+    .swiper-button-prev, .swiper-button-next
+        top: 50%
+        width: 84px
+        height: 112px
+        z-index: 9
+        &::after
+            content: ''
+        +media-sptb
+            width: 40px
+            height: 50px
+    .swiper-button-prev
+        left: 1%
+        background: url(../images/s2Arrow.png) no-repeat center center
+        background-size: contain
+        transform: rotate(180deg)
+        filter: grayscale(100%)
+        transition: 0.3s all
+        +media-sptb
+            left: 1%
+        &:hover, &:focus, &.active
+            filter: unset
+    .swiper-button-next
+        right: 1%
+        background: url(../images/s2Arrow.png) no-repeat center center
+        background-size: contain
+        filter: grayscale(100%)
+        transition: 0.3s all
+        +media-sptb
+            right: 1%
+        &:hover, &:focus, &.active
+            filter: unset
+.swiper-pagination
+    bottom: -20px !important
+    .swiper-pagination-bullet
+        background-color: #806b3e
+        opacity: 1
+        &.swiper-pagination-bullet-active
+            background-color: #b79320

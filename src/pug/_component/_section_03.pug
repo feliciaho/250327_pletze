@@ -1,0 +1,73 @@
+section#s3
+	.title(data-aos="fade-down" data-aos-duration="1000")
+		img(src="images/s3Title.png" alt="主要npc介紹")
+	.tab(data-aos="fade-up" data-aos-duration="1500")
+		ul
+			li(:class="{ 'active' : npcIndex == 0 }" @click="npcSwitch(0)") 亞彭斯．貝迪契​
+			li(:class="{ 'active' : npcIndex == 1 }" @click="npcSwitch(1)") 洛潔琳．貝迪契​
+			li(:class="{ 'active' : npcIndex == 2 }" @click="npcSwitch(2)") 克拉烏蒂亞​
+			li(:class="{ 'active' : npcIndex == 3 }" @click="npcSwitch(3)") 札珂菈
+	.content(data-aos="fade-up" data-aos-duration="1500")
+		.swiper
+			.swiper-container
+				.swiper-wrapper
+					.swiper-slide
+						.ch
+							img(src="images/s3Ch01.png")
+						.text
+							.title
+								img(src="images/s3Text01.png")
+							h2 	"復興藝術與文化，​#[br]就是我們家族存在的理由。​"​
+							p 	贊助藝術家的貝迪契家族大家長。​#[br]
+								| 當阿克拉西亞因為鎖鏈戰爭而崩塌時，​​#[br]
+								| 貝迪契家族再次點燃了藝術之火，是個歷史悠久的家族。​​#[br]​#[br]
+								| 身為貝迪契家族的大家長，​#[br]
+								| 亞彭斯同樣熱愛著藝術並贊助著全世界的藝術家。#[br]​
+								| 他曾經贊助過阿曼，​#[br]​
+								| 似乎能從他那裡聽到阿曼度過了怎樣的童年。#[br]​
+					.swiper-slide
+						.ch
+							img(src="images/s3Ch02.png")
+						.text
+							.title
+								img(src="images/s3Text02.png")
+							h2 	"小時候我從阿曼那裡​#[br]得到了很大的幫助。#[br]​如果你見到阿曼，#[br]​請一定要轉告他我想見他。​"
+							p 	身為亞彭斯．貝迪契孫女，洛潔琳負責管理藝術品，​​#[br]
+								| 而他也贊助著普列采中才能出眾的藝術家。​​​#[br]​#[br]
+								| 童年時身體孱弱的他，​#[br]
+								| 曾待在美麗的村莊「弗里希利亞村」。​​#[br]
+								| 在那裡，他遇見了改變自己命運的少年。​#[br]​​#[br]
+								| 隨著時間流逝，找到內心光芒的洛潔琳，​#[br]
+								| 依舊思念著那名少年，阿曼。​​#[br]​
+					.swiper-slide
+						.ch
+							img(src="images/s3Ch03.png")
+						.text
+							.title
+								img(src="images/s3Text03.png")
+							h2 	"黑暗之中也存在著光明…​#[br]請賜予我#[br]​尋找光明的智慧。​"​
+							p 	出生於亞爾特米斯一個小公國的克拉烏蒂亞，​#[br]
+								| 為了傳播光與秩序的教導，​​​#[br]
+								| 從小便踏上了祭司的道路。​​​#[br]​#[br]
+								| 成為了一名認真踏實的祭司。​​​#[br]
+								| 而教團也認可他的才能，#[br]​
+								| 將他召喚至首都。​​#[br]​#[br]
+								| 但是成為拉薩摩亞大聖堂的祭司後，​#[br]​
+								| 他面對的是教團長久以來隱藏的祕密。​#[br]​
+					.swiper-slide
+						.ch
+							img(src="images/s3Ch04.png")
+						.text
+							.title
+								img(src="images/s3Text04.png")
+							h2 	"對於追隨命運的人來說，​#[br]就算是掠過的風#[br]​也都有其意義。"​
+							p 	負責在普列采訓練約茲的​​#[br]
+								| 約茲長老札珂菈。​​#[br]
+								| 是位能自由自在地操縱凋零幻影的​​#[br]
+								| 幻影術高手。​​#[br]​#[br]
+								| 極度現實卻相信命運的他，​#[br]​
+								| 為在普列采相遇的冒險家指引了方向。​​#[br]​#[br]
+								| 能夠延續至渺茫未來的，​#[br]​
+								| 過去的線索…！​#[br]​
+			.swiper-button-prev
+			.swiper-button-next

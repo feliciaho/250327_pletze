@@ -1,0 +1,35 @@
+section#s2
+	.title(data-aos="fade-down" data-aos-duration="1000")
+		img(src="images/s2Title.png" alt="地區介紹")
+	.content(data-aos="fade-up" data-aos-duration="1500")
+		.tab
+			button(:class="{'active' : mapIndex >= 0 && mapIndex <= 2}" @click="mapSwitch(0)" )
+				h5 	普列采
+			button(:class="{'active' : mapIndex >= 3 && mapIndex <= 5}" @click="mapSwitch(3)")
+				h5 	弗里希利亞平原
+		.textWrap
+			.text(v-if="mapIndex >= 0 && mapIndex <= 2")
+				p 	普列采位於吉埃娜之海中央，是兼容了各種文化的美麗藝術之都。從前，為了復興因鎖鏈戰爭而式微的藝術，​​#[br]
+					| 貝迪契家族以普列采為中心，展開了對藝術家的贊助。普列采便因此成為了現在的藝術與浪漫的聖地。#[br]
+			.text(v-if="mapIndex >= 3 && mapIndex <= 5")
+				p 	位於普列采大陸外圍的肥沃土地。​​生活於此的人們以栽培希利亞莓度日。​​這裡是個和平寧靜的地方，​​#[br]
+					| 只是偶爾會有覬覦普列采藝術品的盜賊出沒。​​​然而，這裡也曾有過某座小村莊付之一炬的悲痛記憶。​​#[br]
+		.swiper
+			.swiper-container
+				.swiper-wrapper
+					.swiper-slide
+						img(src="images/s2Bg1-1.png" alt="普列采")
+					.swiper-slide
+						img(src="images/s2Bg1-2.png" alt="普列采")
+					.swiper-slide
+						img(src="images/s2Bg1-3.png" alt="普列采")
+					.swiper-slide
+						img(src="images/s2Bg2-1.png" alt="弗里希利亞平原")
+					.swiper-slide
+						img(src="images/s2Bg2-2.png" alt="弗里希利亞平原")
+					.swiper-slide
+						img(src="images/s2Bg2-3.png" alt="弗里希利亞平原")
+			.swiper-button-next
+			.swiper-button-prev
+		.swiper-pagination
+			.swiper-pagination-bullet

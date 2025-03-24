@@ -1,0 +1,81 @@
+section
+    &#s3
+        background: url(../images/s3Bg.jpg) no-repeat 50% 50%
+        background-size: cover
+        .tab
+            width: 100%
+            display: flex
+            justify-content: center
+            ul
+                position: relative
+                display: flex
+                flex-direction: row
+                justify-content: center
+                font-size: clamp(1.2rem , 1.2vw, 1.2rem)
+                max-width: 920px
+                margin: 2% 0
+                +media-sp
+                    max-width: 400px
+                    flex-wrap: wrap
+                    gap: 8px
+                &::before
+                    position: absolute
+                    width: 922px
+                    height: 163px
+                    top: 50%
+                    left: 50%
+                    transform: translate(-50%, -50%)
+                    content: ''
+                    background: url(../images/s3tab_deco.png) no-repeat center center
+                    background-size: contain
+                    pointer-events: none
+                    +media-sp
+                        display: none
+                li
+                    width: 205px
+                    height: 58px
+                    line-height: 58px
+                    cursor: pointer
+                    transition: 0.3s
+                    background: #2f1606
+                    border-right: 2px solid #9277519a
+                    color: #72624b
+                    &:last-child
+                        border-right: none
+                    &:hover,&.active
+                        color: #cebe94
+                        background: linear-gradient(90deg, #6d4422 30%, #8b5e34 70%)
+                    +media-sp
+                        width: 145px
+                        height: 40px
+                        border: 1px solid #9277519a
+                        line-height: 38px
+                        border-radius: 5px
+.swiper
+    .swiper-slide
+        display: flex
+        justify-content: center
+        align-items: center
+        +media-sptb
+            flex-direction: column
+        .ch
+            width: 40%
+            +media-sptb
+                width: 50%
+        .text
+            margin: 0 1%
+            +media-sptb
+                width: 100%
+            .title
+                +media-sptb
+                    img
+                        max-width: 50%
+            h2
+                font-size: clamp(1.3rem , 1.8vw, 2rem)
+                color: #c6ab5a
+                font-family: "Noto Serif TC", serif
+                font-weight: 500
+                line-height: 1.3
+                margin: 5% 0
+                +media-narrow
+                    margin: 2% 40px

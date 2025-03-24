@@ -1,0 +1,22 @@
+main#main
+    video(autoplay="autoplay" muted="true" loop="true" playsinline="true")
+        source(src="media/video.mp4" type="video/mp4")
+    .content(data-aos="fade-down" data-aos-duration="1000")
+        p
+            | 為了尋找阿曼的痕跡​​​#[br]
+            | 而抵達藝術與浪漫的聖地​
+        img.deco(src="images/mainTitle_deco.png")
+        .title
+            img(src="images/mainTitle.png" ata-aos="fade-in" alt="新大陸 : 普列采" data-aos="zoom-in" data-aos-duration="2000")
+        img#btn-video(src="images/videoBtn.png" alt="video button")
+        p
+            | 過去連接著現在、現在的時間則連接著未來。​​​#[br]
+            | 循著那些蛛絲馬跡，​​​#[br]
+            | 就能見到你思念的那個人…​​​​#[br]
+#videoModal(class="modal fade video" tabindex="-1" aria-labelledby="exampleModalLabel")
+    .modal-dialog.modal-xl
+        .modal-content
+            .modal-header
+                button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+            .modal-body
+                #videoPlayer

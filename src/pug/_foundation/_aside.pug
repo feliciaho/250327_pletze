@@ -1,0 +1,7 @@
+aside.aside
+    ul 
+        li(:class="{ 'active' : asideNum == 1 }" @click="asideScroll(1)") 普列采大陸介紹
+        li(:class="{ 'active' : asideNum == 2 }" @click="asideScroll(2)") 地區介紹​
+        li(:class="{ 'active' : asideNum == 3 }" @click="asideScroll(3)") 主要NPC介紹​
+        li#top
+            img(src="images/asideTop.png" alt="top" @click="backTop")

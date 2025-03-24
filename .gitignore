@@ -1,0 +1,181 @@
+#
+# If all files excluded and you will include only specific sub-directories
+# the parent path must matched before.
+#
+
+/**
+!/.gitignore
+!/.gitlab-ci.yml
+
+# ignore file extension
+
+# Allow folder or files
+
+## for root readme doc
+!/README.md
+
+## for src folder and child folder
+!/src/
+!/src/**/
+
+# for src file and child file
+!/src/*
+!/src/**/* 
+
+## for html
+# for html child file
+!/**/*.html
+
+## for css
+# for css folder and child folder
+!/css/
+!/css/**/
+
+# for css file
+!/css/*.css
+!/css/*.map
+
+# for css child file
+!/css/**/*.css
+!/css/**/*.map
+
+# for font file
+!/css/**/*.eot
+!/css/**/*.ttf
+!/css/**/*.woff
+!/css/**/*.woff2
+!/css/**/*.otf
+!/css/**/*.svg
+
+## for js
+# for js folder and child folder
+!/js/
+!/js/**/
+
+# for js file
+!/js/*.js
+
+# for js child file
+!/js/**/*.js
+
+## for image or images or img
+# for images folder and child folder
+# for js folder and child folder
+!/image/
+!/image/**/
+
+!/images/
+!/images/**/
+
+!/img/
+!/img/**/
+
+# for js file
+!/image/*.png
+!/image/*.jpg
+!/image/*.svg
+!/image/*.jpeg
+!/image/*.ico
+
+!/images/*.png
+!/images/*.jpg
+!/images/*.svg
+!/images/*.jpeg
+!/images/*.ico
+
+!/img/*.png
+!/img/*.jpg
+!/img/*.svg
+!/img/*.jpeg
+!/img/*.ico
+
+# for js child file
+!/image/**/*.png
+!/image/**/*.jpg
+!/image/**/*.svg
+!/image/**/*.jpeg
+!/image/**/*.ico
+
+!/images/**/*.png
+!/images/**/*.jpg
+!/images/**/*.svg
+!/images/**/*.jpeg
+!/images/**/*.ico
+
+!/img/**/*.png
+!/img/**/*.jpg
+!/img/**/*.svg
+!/img/**/*.jpeg
+!/img/**/*.ico
+
+## for media
+# for meida folder and child folder
+!/media/
+!/media/**/
+
+# for media file
+!/media/*.mp3
+
+# for media child file
+!/media/**/*.mp3
+
+## for video
+# for video folder and child folder
+!/video/
+!/video/**/
+
+# for video file
+!/video/*.mp4
+!/video/*.wav
+!/video/*.webm
+
+# for video child file
+!/video/**/*.mp4
+!/video/**/*.wav
+!/video/**/*.webm
+
+## for sass
+# for sass folder and child folder
+!/sass/
+!/sass/**/
+
+# for sass file
+!/sass/*.sass
+
+# for sass child file
+!/sass/**/*.sass
+
+## for scss
+# for scss folder and child folder
+!/scss/
+!/scss/**/
+
+# for scss file
+!/scss/*.scss
+
+# for scss child file
+!/scss/**/*.scss
+
+## for pug
+# for pug folder and child folder
+!/pug/
+!/pug/**/
+
+# for pug file
+!/pug/*.pug
+
+# for pug child file
+!/pug/**/*.pug
+
+## for dist folder and child folder (gitlab deploy)
+!/dist/
+!/dist/**/
+
+# for dist file and child file (gitlab deploy)
+!/dist/*
+!/dist/**/* 
+
+# default setting
+.DS_Store
+node_modules
+# /dist
